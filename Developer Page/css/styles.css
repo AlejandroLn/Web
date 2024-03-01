@@ -26,7 +26,39 @@ body {
   font-size: 2rem;
 
 }
-.navegacion-principal{
+/*.navegacion-principal{
   background-color: var(--secundario);
+  
+
+}*/
+
+.nav-bg{
+  background-color: var(--secundario);
+}
+.contenedor{
+  width: 120rem;
+ /*Una manera de poner los 4 margenes en 4 propiedades
+  margin-top: 0;
+  margin-bottom:  0;
+  margin-right: auto;*/
+  /*margin: 0 auto 0 auto ;  tomando las posiciones del reloj*/
+  margin:0 auto; /*El primer valor corresponde a top-bottom y el segundo valor corrresponde a right-left */
+  
+}
+.navegacion-principal a{
+  background-color: var(--primario);
 
 }
+/*Displaying block orizontal-inline es verticar*/
+.navegacion-principal{
+  padding: 1rem;
+
+}
+
+.navegacion-principal a{
+  color:var(--blanco);
+  text-decoration:none;
+}
+/*sentrar el nav y investigar que es flex box*/
+
+
