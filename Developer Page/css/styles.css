@@ -51,14 +51,27 @@ body {
 }
 /*Displaying block orizontal-inline es verticar*/
 .navegacion-principal{
-  padding: 1rem;
+  
+  display:flex;
+  /*Justify-content es para filas
+  alaing-items es para columnas (flex-direction)*/
+  
+  justify-content: space-between;
+  font-size: 2rem;
+  font-weight: bold;
+  /*Weight es para poner negritas*/
 
 }
 
 .navegacion-principal a{
+  padding: 1rem;
   color:var(--blanco);
   text-decoration:none;
 }
 /*sentrar el nav y investigar que es flex box*/
-
+.navegacion-principal a:hover{
+background-color: var(--primario);
+color:var(--oscuro)
+}
+/*hover es una seudo clase-porque se activa cuando haces una accion*/
 
