@@ -49,7 +49,7 @@ body {
   background-color: var(--primario);
 
 }
-/*Displaying block orizontal-inline es verticar*/
+/*Displaying block orizontal-inline es vertical*/
 .navegacion-principal{
   
   display:flex;
@@ -69,9 +69,31 @@ body {
   text-decoration:none;
 }
 /*sentrar el nav y investigar que es flex box*/
+
 .navegacion-principal a:hover{
 background-color: var(--primario);
 color:var(--oscuro)
 }
-/*hover es una seudo clase-porque se activa cuando haces una accion*/
+/*hover es una seudo clase-porque se activa cuando haces una accion- Las maneras para css  talwind y boostrap*/
+
+/*Tamaños recomendados para media query
+480px para moviles 
+768px para tablets 
+1140px para laptops
+1400px para dispositivos más grandes como monitores o tvs*/
+body { background-color: beige; }
+
+@media (min-width: 480px){
+body{
+  background-color:blue;}
+}
+
+@media (min-width: 780px){
+  body{
+    background-color:cornflowerblue;}
+  }
+  @media (min-width:px){
+   
+  }
+  /* que es un snippet y que es json*/ 
 
