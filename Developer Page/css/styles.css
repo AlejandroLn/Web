@@ -128,10 +128,9 @@ body{
 }
 .contenedor-hero{
   position: absolute;/*El hijo debe de ser absoluto*/
-  background-color: rgba(0, 0, 0, .7);
+  background-color: rgba(0, 0, 0, .7); /*.7 es la trasparencia*/
   width: 100%;
   height: 100%;
-  /*.7 es la trasparencia*/
   /*alinear y vertical y horizontalmente*/
   display:flex;
   flex-direction:column;
@@ -182,4 +181,40 @@ body{
   y que es box shadow, blur, box model  
   son motores para firefox y chrome
   mox-boxshadow webkit-box-shadow*/
+}
+
+/*Grid es cuadricula maya*/
+/*Servicios*/
+@media (min-width: 768px){
+  .servicios{
+    display: grid;
+    /*grid-template-columns: 1fr 1fr 1fr;Alternativa*/
+    /*grid-template-columns3.33% 3.33% 3.33%;Alternativa*/
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.servicio{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*Ajustar el color y sin "negritas" del h3*/
+.servicio h3{
+color: var(--secundario);
+font-weight: normal;
+}
+.servicio p {
+  text-align: center;
+  /*Interlineado*/
+  line-height: 2;
+
+}
+.servicio .iconos {
+  height: 15rem;
+  width: 15rem;
+  align-items: center;
+  justify-content: space-evenly;
+  display: flex;
+  background-color: var(--primario);
+  border-radius: 50%;
 }
