@@ -5,11 +5,12 @@
   --primario: #ffc107;
   --secundario: #0097a7;
   --gris: #757575;
+  --grisclaro:#DFE9F3;
 
 
 }
 
-
+/*Scroll snap es propiedad del css para controlar el desplazamiento de una pagina web*/
 
 html{
   font-size: 62.5%;
@@ -160,12 +161,19 @@ body{
   border-radius: .5rem; /*Borde de las esquinas redondeadas */
   width:90%; /*Ancho del boton*/
   text-align:center; /*Centrar texto del boton*/
+  border: none;/*Esto afecta únicamente al botton de la etiqueta "input"*/
+
 }
+
 @media (min-width:768px){
   .botton{
     width: auto;
   }
  
+}
+
+.botton:hover{
+  cursor: pointer;
 }
 .sombra{
   margin-top: 2rem;
@@ -219,3 +227,80 @@ font-weight: normal;
   border-radius: 50%;
 }
 /*investigar en html cuales son las etiquetas para un formulario*/
+/*Contacto*/
+.formulario{
+  background-color: var(--gris);
+  width: min(60rem, 100%);
+  /*AHORRA EL USO DE MEDIA QUERY. ¿Qué es más pequeño, 60 rem o el 100% del tamaño de la pantalla?*/
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 1rem;
+
+}
+
+.formulario fieldset{
+  border: none;
+}
+.formulario legend {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  color: var(--primario);
+}
+@media (min-width: 768px) {
+  .contenedor-campos{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 1rem;
+    grid-template-rows: auto auto 20rem; /*Darle el espacio de cada fila*/
+  }
+  /*repaso:nth-child significa el # del hijo. el orden seria:nombre,teléfono,correo y mensaje.
+  Cómo requerimos modificar correo y mensaje, usaremos 3 y 4 en nth-child*/
+  .campo:nth-child(3),
+  .campo:nth-child(4){
+    /*Posiciona el elemento, "que vaya de la columna 1 a la 3"*/
+    grid-column: 1/3;
+  }
+}
+
+
+.campo label{
+  color: var(--blanco);
+  font-weight: bold;
+  margin-bottom: .5rem;
+  display: block;/*Lograr que cada label tome el espacio disponible y esre separado del input*/
+}
+
+.input-text{
+  width: 100%;
+  border: none;
+  padding: 1.5rem;
+  border-radius: .5rem;
+}
+campo textarea{
+  height: 20rem;/**Hacer más grande la altura del textarea*/
+  
+}
+/*Utilidades */
+.w-sm-100{
+  width: 100%;
+}
+@media (min-width: 768px){
+  .w-sm-100{
+    width: auto;
+  }
+
+  .flex{
+    display: flex;
+  }
+
+  .alinear-derecha{
+    justify-content: flex-end;
+  }
+}
+
+.footer{
+  text-align: center;
+}
